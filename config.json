@@ -43,7 +43,7 @@
         "enabled": true,
         "host": "0.0.0.0",
         "port": 8080,
-        "stratumHost": "btg-testnet.miningspot.net",
+        "stratumHost": "my-awesome-pool.com",
         "stats": {
             "updateInterval": 30,
             "historicalRetention": 14400,
@@ -51,7 +51,7 @@
         },
         "adminCenter": {
             "enabled": false,
-            "password": "m4r1hu4n4"
+            "password": "defaultpassword"
         },
         "tlsOptions" : {
             "enabled": false,
