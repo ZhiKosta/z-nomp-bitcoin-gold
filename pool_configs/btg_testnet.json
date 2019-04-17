@@ -14,7 +14,7 @@
     "walletInterval": 500,
     
     "rewardRecipients": {
-         "moYHCLsMPFetEG2VJjsp5SdKxnrn77ch9i": 1.0 //Pool Operator fee in percentages
+         "moYHCLsMPFetEG2VJjsp5SdKxnrn77ch9i": 1.0
     },
     
     "tlsOptions": {
@@ -31,7 +31,7 @@
         "_comment_paymentMode":"prop, pplnt",
         "paymentInterval": 300,
         "_comment_paymentInterval": "Interval in seconds to check and perform payments.",
-        "minimumPayment": 0.01, //In BTG satoshis
+        "minimumPayment": 0.01,
         "maxBlocksPerPayment": 3,
         "daemon": {
             "host": "127.0.0.1",
