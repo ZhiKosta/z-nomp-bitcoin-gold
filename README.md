@@ -1,12 +1,6 @@
-# Zcash® and Zclassic - Node Open Mining Portal
+# Bitcoin Gold - Node Open Mining Portal
 
-**[Click here for the official - Zcash® Zclassic, Bitcoin Gold Stratum Mining Pool Installation Guide](https://zdeveloper.org/wiki:z-nomp_install)**
-
-This is a Equihash mining pool based off of Node Open Mining Portal.
-
-Donations for development are greatly appreciated!
-  * BTC: 12Yc3Ezayhnm4X9x3nxV7vWY1h2qpWgajc, 18vHMxVzotQ9EPyESrf7Z1hNM9AwJeVHgD
-  * ZCL: zcXDWbgReztLLXSTUMT2nEumiDM6zTzUXFb7vUnx9JNfJDVqbodyxwEQwgDkFw7Dp128tBU8n8rmVxT43DshmeTEM4LHcdz
+This is a Equihash 144,5 mining pool based off of Node Open Mining Portal.
 
 #### Production Usage Notice
 This is beta software. All of the following are things that can change and break an existing Z-NOMP setup: functionality of any feature, structure of configuration files and structure of redis data. If you use this software in production then *DO NOT* pull new code straight into production usage because it can and often will break your setup and require you to tweak things like config files or redis data. *Only tagged releases are considered stable.*
@@ -16,33 +10,20 @@ Usage of this software requires abilities with sysadmin, database admin, coin da
 
 
 ### Community / Support
-IRC
-* Support / general discussion join: https://gitter.im/zclassicorg/z-nomp
+Discord
+* #dev in https://discord.gg/HmVUU6S
 
-If your pool uses Z-NOMP let us know and we will list your website here.
+Redit
+* https://www.reddit.com/r/BitcoinGoldHQ
 
-### Some pools using Z-NOMP or node-stratum-module:
-
-http://pool.gold - Bitcoin Gold Pool
-
-https://pool.cryptobroker.io/zcl Running MPOS and 0.5% of the fee goes to the Zclassic donation fund! 200+ blocks have been found as well! 
-
-http://luckpool.org Zcash Pool with Custom Frontend w/Miner's Jackpot
-
-http://zclmine.com/ Custom frontend
-
-http://zclassic.miningspeed.com Custom frontend and 0% fee
-
-https://zpool.it 0.5% fee
-
-http://miningpool.io/
+Forum
+* https://forum.bitcoingold.org/
 
 Usage
 =====
 
-
 #### Requirements
-* Coin daemon(s) (find the coin's repo and build latest version from source)
+* Coin daemon(s) (find the coin's repo and build latest version from source) [tba]
 * [Node.js](http://nodejs.org/) v7+ ([follow these installation instructions](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager))
 * [Redis](http://redis.io/) key-value store v2.6+ ([follow these instructions](http://redis.io/topics/quickstart))
 
@@ -56,13 +37,8 @@ you are using - a good place to start with redis is [data persistence](http://re
 
 
 #### 0) Setting up coin daemon
-Follow the build/install instructions for your coin daemon. Your coin.conf file should end up looking something like this:
-```
-daemon=1
-rpcuser=zclassicrpc
-rpcpassword=securepassword
-rpcport=8232
-```
+[TBA]
+
 For redundancy, its recommended to have at least two daemon instances running in case one drops out-of-sync or offline,
 all instances will be polled for block/transaction updates and be used for submitting blocks. Creating a backup daemon
 involves spawning a daemon using the `-datadir=/backup` command-line argument which creates a new daemon instance with
@@ -89,8 +65,7 @@ npm install
 ```
 
 ##### Pool config
-Take a look at the example json file inside the `pool_configs` directory. Rename it to `zclassic.json` and change the
-example fields to fit your setup.
+[TBA]
 
 ```
 Please Note that: 1 Difficulty is actually 8192, 0.125 Difficulty is actually 1024.
@@ -102,6 +77,8 @@ ie: Miner 1 mines at 0.1 difficulty and finds 10 shares, the pool sees it as 1 s
 
 
 ##### [Optional, recommended] Setting up blocknotify
+[TBE]
+
 1. In `config.json` set the port and password for `blockNotifyListener`
 2. In your daemon conf file set the `blocknotify` command to use:
 ```
