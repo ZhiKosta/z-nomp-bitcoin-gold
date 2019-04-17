@@ -2,19 +2,19 @@
     "enabled": false,
     "coin": "btg.json",
     
-    "address": "",
-    "_comment_address": "a transparent address to send coinbase rewards to and to transfer to zAddress.",
+    "address": "YOUR_BTG_WALLET",
+    "_comment_address": "a transparent address to send coinbase rewards",
     
     "zAddress": "",
     "_comment_zAddress": "Not used",
     
-    "tAddress": "",
+    "tAddress": "YOUR_BTG_WALLET_ADDRESS_2",
     "_comment_tAddress": "transparent address used to send payments, make this a different address, otherwise payments will not send",
     
-    "walletInterval": 5,
+    "walletInterval": 500,
     
     "rewardRecipients": {
-        "": 1.0
+         "YOUR_POOL_OPERATOR_WALLET_ADDRESS": 1.0
     },
     
     "tlsOptions": {
@@ -27,29 +27,29 @@
     "paymentProcessing": {
         "minConf": 10,
         "enabled": true,
-        "paymentMode": "prop",
+        "paymentMode": "pplnt",
         "_comment_paymentMode":"prop, pplnt",
-        "paymentInterval": 57,
+        "paymentInterval": 300,
         "_comment_paymentInterval": "Interval in seconds to check and perform payments.",
-        "minimumPayment": 0.1,
+        "minimumPayment": 0.01,
         "maxBlocksPerPayment": 3,
         "daemon": {
             "host": "127.0.0.1",
             "port": 8332,
-            "user": "username",
-            "password": "password"
+            "user": "DAEMON_RPCUSER",
+            "password": "DAEMON_RPCPASS"
         }
     },
     
     "ports": {
         "3857": {
             "tls":false,
-            "diff": 0.05,
+            "diff": 0.1,
             "varDiff": {
-                "minDiff": 0.04,
-                "maxDiff": 16,
-                "targetTime": 15,
-                "retargetTime": 60,
+                "minDiff": 0.1,
+                "maxDiff": 5,
+                "targetTime": 120,
+                "retargetTime": 120,
                 "variancePercent": 30
             }
         }
@@ -59,15 +59,15 @@
                 {
                 "host": "127.0.0.1",
                 "port": 8332,
-                "user": "username",
-                "password": "password"
+                "user": "DAEMON_RPCUSER",
+                "password": "DAEMON_RPCPASS"
                 }
                 ],
     
     "p2p": {
         "enabled": false,
         "host": "127.0.0.1",
-        "port": 19333,
+        "port": 18338,
         "disableTransactions": true
     },
     
